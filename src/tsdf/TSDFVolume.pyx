@@ -238,7 +238,7 @@ cdef class TSDFVolume:
                                 self.volume[i, j, k, -1] -= self.free_space_vote
                         continue
 
-                    self.update_mask[i, j, k] = 1
+                    self.update_mask[i, j, k] += 1
 
 
                     weight_old = self.weights[i, j, k]
